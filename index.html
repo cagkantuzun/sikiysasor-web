@@ -3,26 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sikiysa Sor</title>
+<title>Sıkıysa Sor</title>
 <style>
-  :root{color-scheme: light dark;}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;max-width:600px;margin:0 auto;padding:60px 20px;text-align:center;color:#1b0f2b;background:#fff;}
-  .logo{width:120px;height:120px;border-radius:24px;margin-bottom:20px;box-shadow:0 4px 16px rgba(0,0,0,0.15);}
-  h1{font-size:2rem;margin-bottom:8px;}
-  p{color:#555;margin-bottom:32px;}
-  .linkler a{display:block;margin:10px 0;padding:12px 20px;border:1px solid #ddd;border-radius:10px;text-decoration:none;color:#3a1f6b;font-weight:600;}
-  .linkler a:hover{background:#f6f2ff;}
+  :root{color-scheme: dark;}
+  *{box-sizing:border-box;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    max-width:640px;
+    margin:0 auto;
+    padding:56px 20px 80px;
+    text-align:center;
+    color:#f5eefc;
+    background:
+      radial-gradient(circle at 20% 0%, #4a2a8a 0%, transparent 55%),
+      radial-gradient(circle at 100% 30%, #ffb347 0%, transparent 40%),
+      linear-gradient(160deg, #1b0f3b 0%, #2a1458 55%, #3a1f6b 100%);
+    background-attachment:fixed;
+    min-height:100vh;
+  }
+  .logo{
+    width:128px;height:128px;border-radius:28px;margin-bottom:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45), 0 0 0 4px rgba(255,255,255,0.06);
+  }
+  h1{font-size:2.3rem;margin-bottom:6px;letter-spacing:.5px;}
+  .tagline{color:#d9c8f5;margin-bottom:36px;font-size:1.05rem;}
+
+  .kart{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:16px;
+    padding:24px 22px;
+    margin-bottom:32px;
+    text-align:left;
+    backdrop-filter:blur(6px);
+  }
+  .kart h2{margin:0 0 14px;font-size:1.15rem;color:#ffd479;text-align:center;}
+  .kart p{margin:0 0 10px;font-size:.97rem;line-height:1.6;color:#ece3fa;}
+  .kart p:last-child{margin-bottom:0;}
+
+  .kategoriler{display:flex;gap:10px;justify-content:center;margin-bottom:32px;flex-wrap:wrap;}
+  .rozet{
+    flex:1;min-width:150px;
+    border-radius:12px;padding:14px 10px;
+    font-size:.85rem;font-weight:600;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+  }
+  .rozet span{display:block;font-size:.78rem;font-weight:400;margin-top:4px;opacity:.85;}
+  .yesil{background:#2e7d5b;color:#eafff3;}
+  .turuncu{background:#c1651f;color:#fff3e6;}
+  .kirmizi{background:#a12b3b;color:#ffe8ec;}
+
+  .linkler a{
+    display:block;margin:10px 0;padding:14px 20px;
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:12px;text-decoration:none;
+    color:#ffe9b8;font-weight:600;
+    background:rgba(255,255,255,0.04);
+    transition:background .15s ease, transform .15s ease;
+  }
+  .linkler a:hover{background:rgba(255,255,255,0.12);transform:translateY(-1px);}
+
+  footer{margin-top:44px;font-size:.8rem;color:#b7a6d6;}
 </style>
 </head>
 <body>
-<img class="logo" src="logo.png" alt="Sikiysa Sor logo">
-<h1>Sikiysa Sor</h1>
-<p>Arkadas gruplari icin cesaret ve itiraf oyunu.</p>
-<div class="linkler">
-  <a href="/gizlilik-politikasi.html">Gizlilik Politikasi</a>
-  <a href="/kullanim-kosullari.html">Kullanim Kosullari</a>
-  <a href="https://www.instagram.com/sikiysa_sor/">Instagram</a>
-  <a href="mailto:sikiysasor@gmail.com">Iletisim</a>
+<img class="logo" src="logo.png" alt="Sıkıysa Sor logo">
+<h1>Sıkıysa Sor</h1>
+<p class="tagline">Arkadaş grupları için cesaret ve itiraf oyunu 🎲</p>
+
+<div class="kart">
+  <h2>Nasıl Oynanır?</h2>
+  <p>Zarını at, piyonunu ilerlet, geldiğin hanenin kartını çek ve soruyu <strong>tek başına</strong> gör. Cevabını yüksek sesle söyle — sonra ya soruyu herkese göster ya da cezanı çek! Sırasıyla devam edin, istediğiniz kadar tur oynayın. Kart çekmeden hızlıca oynamak isteyenler için de bir <strong>Hızlı Oyun Modu</strong> var.</p>
+  <p>Kuralı basit: soru göstermek istemeyen ceza görür, ne kadar zorsa o kadar eğlenceli 😏</p>
 </div>
+
+<div class="kategoriler">
+  <div class="rozet yesil">🟢 Yeşil<span>Aile ortamı, usturuplu sorular</span></div>
+  <div class="rozet turuncu">🟠 Turuncu<span>Yakın arkadaş grubu için</span></div>
+  <div class="rozet kirmizi">🔴 Kırmızı<span>Sınır tanımayanlara özel</span></div>
+</div>
+
+<div class="linkler">
+  <a href="/gizlilik-politikasi.html">Gizlilik Politikası</a>
+  <a href="/kullanim-kosullari.html">Kullanım Koşulları</a>
+  <a href="https://www.instagram.com/sikiysa_sor/">Instagram</a>
+  <a href="mailto:sikiysasor@gmail.com">İletişim</a>
+</div>
+
+<footer>© 2026 Sıkıysa Sor</footer>
 </body>
 </html>
